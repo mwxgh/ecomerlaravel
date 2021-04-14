@@ -24,7 +24,7 @@ class SliderAddRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:sliders|max:255',
+            'name'=>'required|unique:sliders|max:255|min:5',
             'description'=>'required',
             'image_path'=>'required'
         ];
@@ -35,6 +35,7 @@ class SliderAddRequest extends FormRequest
             'name.required' => 'Vui lòng nhập đầy đủ tên slider',
             'name.unique' => 'Tên không được phép trùng với slider khác',
             'name.max'=>'Tên không được phép quá dài',
+            'name.min'=>'Vui lòng nhập slider đủ dài 5 ký tự',
             'description.required'=>'Vui lòng nhập mô tả slider',
             'image_path.required'=>'Vui lòng chọn một ảnh',
         ];
