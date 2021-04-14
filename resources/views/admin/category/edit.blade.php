@@ -45,3 +45,9 @@
 </div>
 <!-- /.content-wrapper -->
 @endsection
+
+
+@section('custom_js')
+<script src="{{ asset('vendor/sweetalert2/sweetalert2@10.js')}}"></script>
+<script src="{{ asset('assetadmin/main.js')}}"></script>
+@endsection
